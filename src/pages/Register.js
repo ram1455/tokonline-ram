@@ -16,6 +16,7 @@ function Register() {
 
   useEffect(() => {
     dispatch(registerAction.resetForm());
+    /* eslint-disable */
   }, []);  
 
   const handleRegister = (e) => {
