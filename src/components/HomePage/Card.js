@@ -4,8 +4,11 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import serverApi from '../../app/api/ServerApi';
 
-import batangHitam from '../../img/8397555_8b356e64-ec39-4549-b2e5-eed09e519db7_554_554.jpg'
 
+import helm1  from '../../img/helm1.jpg';
+import helm2  from '../../img/helm2.jpg';
+import helm3  from '../../img/helm3.jpg';
+import helm4  from '../../img/helm4.jpg';
 // styled-components
 
 const CardBody = styled.div`
@@ -65,6 +68,50 @@ function Kartu () {
 
   return (
       <Kontainer>
+      <Kard>
+          <Kimg style={{maxHeight: '10rem', height:'100%'}} src={helm1}/>
+          <CardBody>
+            <Card.Title>HELM X1</Card.Title>
+            <Card.Subtitle className="mb-2 text-muted">big-helmet</Card.Subtitle>
+            <Card.Text>
+            Rp.1.000.000
+            </Card.Text>
+            <Button onClick={mentensAlert} variant="success">Order</Button>
+          </CardBody>
+        </Kard>
+      <Kard>
+          <Kimg style={{maxHeight: '10rem', height:'100%'}} src={helm2}/>
+          <CardBody>
+            <Card.Title>HELM G-SLIM </Card.Title>
+            <Card.Subtitle className="mb-2 text-muted">slim-helmet</Card.Subtitle>
+            <Card.Text>
+            Rp.800.000
+            </Card.Text>
+            <Button onClick={mentensAlert} variant="success">Order</Button>
+          </CardBody>
+        </Kard>
+      <Kard>
+          <Kimg style={{maxHeight: '10rem', height:'100%'}} src={helm3}/>
+          <CardBody>
+            <Card.Title>HELM TK-normal</Card.Title>
+            <Card.Subtitle className="mb-2 text-muted">average-helmet</Card.Subtitle>
+            <Card.Text>
+            Rp.789.000
+            </Card.Text>
+            <Button onClick={mentensAlert} variant="success">Order</Button>
+          </CardBody>
+        </Kard>
+      <Kard>
+          <Kimg style={{maxHeight: '10rem', height:'100%'}} src={helm4}/>
+          <CardBody>
+            <Card.Title>BLACK-KNIGHT HELM</Card.Title>
+            <Card.Subtitle className="mb-2 text-muted">ekslusif average-helmet</Card.Subtitle>
+            <Card.Text>
+            Rp.4.500.000
+            </Card.Text>
+            <Button onClick={mentensAlert} variant="success">Order</Button>
+          </CardBody>
+        </Kard>
         {
           productData.map( item => (
             <Kard>
@@ -75,7 +122,7 @@ function Kartu () {
             <Card.Text>
             {item.price}
             </Card.Text>
-            <Button onClick={mentensAlert} variant="primary">Order</Button>
+            <Button onClick={mentensAlert} variant="success">Order</Button>
           </CardBody>
         </Kard>
           ))
